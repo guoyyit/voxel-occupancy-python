@@ -1,8 +1,4 @@
-from fastapi import FastAPI
+"""Service entry point: ``uv run uvicorn main:app``."""
+from voxel_occupancy.api import create_app
 
-app = FastAPI()
-
-
-@app.get("/")
-def read_root():
-    return {"Hello": "World"}
+app = create_app()
